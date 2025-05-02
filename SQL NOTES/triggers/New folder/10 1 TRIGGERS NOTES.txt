@@ -1,0 +1,27 @@
+TRIGGERS ARE DATABASE OBJECTS USED TO STORE ANY TYPE OF T-SQL STATEMENTS.	
+THIS TRIGGER CODE IS auto executed IN RESPONSE TO :				
+			DML EVENTS	-	 INSERT, UPDATE, DELETE			[DATA MANUPULATION LANGUAGE]
+			DDL EVENTS	-	 CREATE, ALTER, DROP			[DATA DEFINITION LANGUAGE]
+
+TYPES OF TRIGGERS:
+	*	1. DML TRIGGERS : Applicable for auto execution in response to INSERT / UPDATE / DELETE
+			1.a> FOR TRIGGER : These Triggers are Auto executed IN ADDITION TO actual operation (AFTER TRIGGER)
+			1.b> INSTEAD OF TRIGGER : These Triggers are Auto executed IN PLACE OF actual DML operation
+
+		DURING DML TRIGGER EXECUTION: TWO TABLES ARE AUTO CREATED IN MEMORY : "MEMORY TABLES" or "MAGIC TABLES"			
+			1.	"INSERTED"	- Audits the row(s) being inserted into Table / View
+			2.	"DELETED"	- Audits the row(s) being removed from Table / View
+
+
+	*	2. DDL TRIGGERS : Applicable for auto execution in response to CREATE / ALTER  / DROP
+			2.a > FOR TRIGGER      : Auto execute IN ADDITION To actual DDL operation
+		
+			TYPES OF DDL TRIGGERS:
+			> DATABASE SCOPED DDL TRIGGERS : Defined for DDL operations within Database.	
+				 Ex: Create table, Alter table, Alter view, Create Trigger, etc.. 
+
+			> SERVER SCOPED DDL TRIGGERS   : Defined for DDL operations within server.
+				 ex: Create Database, Alter Database, Drop Databases.
+
+
+		Note:  INSTEAD OF TRIGGER TYPE IS NOT APPLICABLE FOR DDL OPERATIONS. 
